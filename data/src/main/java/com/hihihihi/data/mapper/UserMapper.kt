@@ -12,6 +12,7 @@ fun UserDto.toDomain(): User = User(
     appellation = appellation.orEmpty(),
     dailyGoalTime = dailyGoalTime ?: 0,
     provider = provider.orEmpty(),
+    unlockedAppellations = unlockedAppellations ?: emptyList(),
     createdAt = createdAt?.toLocalDateTime()
 )
 
@@ -21,5 +22,6 @@ fun User.toDto(): UserDto = UserDto(
     createdAt = createdAt?.toTimestamp(),
     dailyGoalTime = dailyGoalTime,
     nickname = nickname,
-    provider = provider
+    provider = provider,
+    unlockedAppellations = unlockedAppellations
 )
