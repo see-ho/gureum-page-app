@@ -6,8 +6,9 @@ import java.time.LocalDateTime
 data class User(
     val userId: String,
     val nickname: String,
-    val appellation: String,   // 칭호
+    val appellation: String,
     val dailyGoalTime: Int,
     val provider: String,
+    val unlockedAppellations: List<String> = emptyList(),
     val createdAt: LocalDateTime? = null
 )
