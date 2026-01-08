@@ -23,4 +23,7 @@ data class UserDto(
 
     @get:PropertyName("provider") @set:PropertyName("provider")
     var provider: String? = null,
+
+    @get:PropertyName("unlocked_appellations") @set:PropertyName("unlocked_appellations")
+    var unlockedAppellations: List<String>? = emptyList(),
 )
